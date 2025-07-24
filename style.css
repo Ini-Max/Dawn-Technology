@@ -322,10 +322,6 @@ body {
 }
 
 /* Grid layout adjustments for new sections */
-.dashboard-grid .quick-links {
-    /* grid-column: 1 / -1; */
-}
-
 .dashboard-grid .upcoming-events {
     grid-column: 1 / -1;
 }
@@ -457,9 +453,6 @@ section h2 {
 }
 
 /* Task Tracker */
-.task-list {
-    space-y: var(--spacing-md);
-}
 
 .task-item {
     display: flex;
@@ -549,9 +542,7 @@ section h2 {
 }
 
 /* Activity Feed */
-.activity-list {
-    space-y: var(--spacing-md);
-}
+
 
 .activity-item {
     display: flex;
