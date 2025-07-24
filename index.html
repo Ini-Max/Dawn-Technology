@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dawn Technologies - Intranet Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+  <!-- Top Navigation Bar -->
+    <nav class="navbar">
+      <div class="nav-left">
+          <button class="sidebar-toggle" id="sidebarToggle">
+            <i class="fas fa-bars"></i>
+          </button>
+          <div class="logo">
+            <i class="fas fa-sun"></i>
+            <span>Dawn Technologies</span>
+          </div>
+      </div>
+      
+      <div class="nav-center">
+          <div class="search-container">
+            <i class="fas fa-search"></i>
+            <input type="text" placeholder="Search..." class="search-input">
+          </div>
+      </div>
+      
+      <div class="nav-right">
+        <div class="nav-icon theme-toggle" id="themeToggle" title="Toggle Dark Mode">
+          <i class="fas fa-moon" id="themeIcon"></i>
+        </div>
+        <div class="nav-icon">
+          <i class="fas fa-user-circle"></i>
+        </div>
+        <div class="nav-icon notification-icon">
+          <i class="fas fa-bell"></i>
+          <span class="notification-badge">3</span>
+        </div>
+        <div class="nav-icon">
+          <i class="fas fa-cog"></i>
+        </div>
+      </div>
+    </nav>
+
+  <!-- Sidebar Menu -->
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar-content">
+      <ul class="sidebar-menu">
+        <li class="menu-item active">
+          <i class="fas fa-tachometer-alt"></i>
+          <span>Dashboard</span>
+        </li>
+        <li class="menu-item">
+          <i class="fas fa-building"></i>
+          <span>Departments</span>
+        </li>
+        <li class="menu-item">
+          <i class="fas fa-th-large"></i>
+          <span>Applications</span>
+        </li>
+        <li class="menu-item">
+          <i class="fas fa-file-alt"></i>
+          <span>Forms</span>
+        </li>
+        <li class="menu-item">
+          <i class="fas fa-book"></i>
+          <span>Resources</span>
+        </li>
+        <li class="menu-item">
+          <i class="fas fa-life-ring"></i>
+          <span>Support</span>
+        </li>
+      </ul>
+    </div>
+  </aside>
+
+  <!-- Main Content Area -->
+  <main class="main-content" id="mainContent">
+      <!-- Welcome Banner -->
+      <section class="welcome-banner">
+        <div class="welcome-content">
+          <h1>Welcome Back, <span id="userName">Ini Maxwell</span>!</h1>
+          <p>Today is <span id="currentDate"></span></p>
+        </div>
+        <div class="welcome-illustration">
+          <i class="fas fa-chart-line"></i>
+        </div>
+      </section>
+
+      <!-- Dashboard Grid -->
+      <div class="dashboard-grid">
+        <!-- Quick Links Section -->
+        <section class="quick-links">
+          <h2>Quick Links</h2>
+          <div class="quick-links-grid">
+            <div class="quick-link-card">
+              <div class="card-icon">
+                <i class="fas fa-users"></i>
+              </div>
+              <h3>HR Portal</h3>
+              <p>Access employee resources</p>
+            </div>
+
+            <div class="quick-link-card">
+              <div class="card-icon">
+                <i class="fas fa-calendar-times"></i>
+              </div>
+              <h3>Leave Request</h3>
+              <p>Submit time-off requests</p>
+            </div>
+
+            <div class="quick-link-card">
+              <div class="card-icon">
+                <i class="fas fa-tools"></i>
+              </div>
+              <h3>IT Helpdesk</h3>
+              <p>Technical support</p>
+            </div>
+
+            <div class="quick-link-card">
+              <div class="card-icon">
+                <i class="fas fa-file-invoice"></i>
+              </div>
+              <h3>Expense Reports</h3>
+              <p>Submit expenses</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Company Announcements -->
+        <section class="announcements">
+          <h2>Company Announcements</h2>
+          <div class="announcements-container">
+            <div class="announcement-item">
+              <div class="announcement-header">
+                <h4>Q4 All-Hands Meeting</h4>
+                <span class="announcement-date">Dec 15, 2024</span>
+              </div>
+              <p>Join us for our quarterly review and planning session.<br>Location: Main Conference Room.</p>
+              <button class="read-more-btn">Read More</button>
+            </div>
+
+            <div class="announcement-item">
+              <div class="announcement-header">
+                <h4>New Security Protocols</h4>
+                <span class="announcement-date">Dec 12, 2024</span>
+              </div>
+              <p>Updated security guidelines are now in effect. Please review the new policies.</p>
+              <button class="read-more-btn">Read More</button>
+            </div>
+
+            <div class="announcement-item">
+              <div class="announcement-header">
+                <h4>Holiday Schedule</h4>
+                <span class="announcement-date">Dec 10, 2024</span>
+              </div>
+              <p>Office closure dates and holiday arrangements for the upcoming season.</p>
+              <button class="read-more-btn">Read More</button>
+            </div>
+
+            <div class="announcement-item">
+              <div class="announcement-header">
+                <h4>New Employee Wellness Program</h4>
+                <span class="announcement-date">Dec 8, 2024</span>
+              </div>
+              <p>Introducing comprehensive wellness benefits including mental health support and fitness memberships.</p>
+              <button class="read-more-btn">Read More</button>
+            </div>
+
+            <div class="announcement-item">
+              <div class="announcement-header">
+                <h4>Office Renovation Update</h4>
+                <span class="announcement-date">Dec 5, 2024</span>
+              </div>
+              <p>Phase 2 of our office modernization project begins next month. Temporary workspace assignments included.</p>
+              <button class="read-more-btn">Read More</button>
+            </div>
+
+            <div class="announcement-item">
+              <div class="announcement-header">
+                <h4>Q1 Training Schedule</h4>
+                <span class="announcement-date">Dec 3, 2024</span>
+              </div>
+              <p>Professional development opportunities and mandatory compliance training sessions for the new quarter.</p>
+              <button class="read-more-btn">Read More</button>
+            </div>
+          </div>
+        </section>
+
+      <!-- Task Tracker -->
+      <section class="task-tracker">
+        <h2>Task Tracker</h2>
+        <div class="task-list">
+          <div class="task-item">
+            <div class="task-checkbox">
+              <input type="checkbox" id="task1">
+              <label for="task1"></label>
+            </div>
+            <div class="task-content">
+              <h4>Review project proposal</h4>
+              <span class="task-due">Due: Today</span>
+            </div>
+            <div class="task-priority high">High</div>
+          </div>
+
+          <div class="task-item">
+            <div class="task-checkbox">
+              <input type="checkbox" id="task2">
+              <label for="task2"></label>
+            </div>
+            <div class="task-content">
+              <h4>Team standup meeting</h4>
+              <span class="task-due">Due: Tomorrow</span>
+            </div>
+            <div class="task-priority medium">Medium</div>
+          </div>
+
+          <div class="task-item">
+            <div class="task-checkbox">
+              <input type="checkbox" id="task3" checked>
+              <label for="task3"></label>
+            </div>
+            <div class="task-content completed">
+              <h4>Submit timesheet</h4>
+              <span class="task-due">Completed</span>
+            </div>
+            <div class="task-priority low">Low</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Activity Feed -->
+      <section class="activity-feed">
+        <h2>Recent Activity</h2>
+        <div class="activity-list">
+          <div class="activity-item">
+            <div class="activity-icon">
+              <i class="fas fa-file-upload"></i>
+            </div>
+            <div class="activity-content">
+              <p><strong>Sarah Johnson</strong> uploaded a new document</p>
+              <span class="activity-time">2 hours ago</span>
+            </div>
+          </div>
+
+          <div class="activity-item">
+            <div class="activity-icon">
+              <i class="fas fa-comment"></i>
+            </div>
+            <div class="activity-content">
+              <p><strong>Mike Chen</strong> commented on your project</p>
+              <span class="activity-time">4 hours ago</span>
+            </div>
+          </div>
+
+          <div class="activity-item">
+            <div class="activity-icon">
+              <i class="fas fa-calendar-check"></i>
+            </div>
+            <div class="activity-content">
+              <p><strong>Team Meeting</strong> scheduled for tomorrow</p>
+              <span class="activity-time">6 hours ago</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Upcoming Events -->
+      <section class="upcoming-events">
+        <h2>Upcoming Events</h2>
+        <div class="events-container">
+          <div class="event-item">
+            <div class="event-date">
+              <div class="event-day">25</div>
+              <div class="event-month">Jul</div>
+            </div>
+            <div class="event-details">
+              <h4>Product Launch Webinar</h4>
+              <p class="event-time">
+                <i class="fas fa-clock"></i>
+                2:00 PM - 3:30 PM
+              </p>
+              <p class="event-location">
+                <i class="fas fa-map-marker-alt"></i>
+                Virtual Event
+              </p>
+            </div>
+            <div class="event-actions">
+              <button class="event-btn primary">Join</button>
+              <button class="event-btn secondary">Details</button>
+            </div>
+          </div>
+
+          <div class="event-item">
+            <div class="event-date">
+              <div class="event-day">28</div>
+              <div class="event-month">Jul</div>
+            </div>
+            <div class="event-details">
+              <h4>Team Building Workshop</h4>
+              <p class="event-time">
+                <i class="fas fa-clock"></i>
+                10:00 AM - 4:00 PM
+              </p>
+              <p class="event-location">
+                <i class="fas fa-map-marker-alt"></i>
+                Conference Room A
+              </p>
+            </div>
+            <div class="event-actions">
+              <button class="event-btn primary">RSVP</button>
+              <button class="event-btn secondary">Details</button>
+            </div>
+          </div>
+          
+          <div class="event-item">
+            <div class="event-date">
+              <div class="event-day">02</div>
+              <div class="event-month">Aug</div>
+            </div>
+            <div class="event-details">
+              <h4>Monthly All-Hands</h4>
+              <p class="event-time">
+                <i class="fas fa-clock"></i>
+                3:00 PM - 4:00 PM
+              </p>
+              <p class="event-location">
+                <i class="fas fa-map-marker-alt"></i>
+                Main Auditorium
+              </p>
+            </div>
+
+            <div class="event-actions">
+              <button class="event-btn primary">Attend</button>
+              <button class="event-btn secondary">Details</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+        <!-- Team Spotlights -->
+        <section class="team-spotlights">
+            <h2>Team Spotlights</h2>
+              <div class="spotlights-container">
+                <div class="spotlight-item">
+                  <div class="spotlight-avatar">
+                    <img src="images/ladywithglasses1.jpg" alt="Rose Spence" class="avatar-img"> 
+                    <div class="spotlight-badge">
+                      <i class="fas fa-star"></i>
+                    </div>
+                  </div>
+
+                  <div class="spotlight-content">
+                    <h4>Rose Spence</h4>
+                    <p class="spotlight-role">Data Engineer</p>
+                    <p class="spotlight-achievement">Successful launched a new data pipeline that improved data accessibility and efficiency for the IT department. </p>
+                    <div class="spotlight-stats">
+                      <div class="stat-item">
+                        <span class="stat-number">5</span>
+                        <span class="stat-label">Years</span>
+                      </div>
+                      <div class="stat-item">
+                        <span class="stat-number">12</span>
+                        <span class="stat-label">Projects</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="spotlight-item">
+                    <div class="spotlight-avatar">
+                      <img src="images/corporate male.jpg" alt="Anthony Gates" class="avatar-img"> 
+                        <div class="spotlight-badge">
+                          <i class="fas fa-trophy"></i>
+                        </div>
+                    </div>
+                    <div class="spotlight-content">
+                        <h4>Anthony Gates</h4>
+                        <p class="spotlight-role">UX Design Lead</p>
+                        <p class="spotlight-achievement">Redesigned our customer portal, resulting in a 60% increase in user satisfaction scores.</p>
+                        <div class="spotlight-stats">
+                            <div class="stat-item">
+                                <span class="stat-number">3</span>
+                                <span class="stat-label">Years</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number">8</span>
+                                <span class="stat-label">Designs</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="spotlight-item">
+                    <div class="spotlight-avatar">
+                      <img src="images/corporate female2.jpg" alt="Edidiong Joshua" class="avatar-img"> 
+                        <div class="spotlight-badge">
+                            <i class="fas fa-medal"></i>
+                        </div>
+                    </div>
+                    <div class="spotlight-content">
+                        <h4>Edidiong Joshua</h4>
+                        <p class="spotlight-role">Product Designer</p>
+                        <p class="spotlight-achievement">Improved our products which result to a 35% increment in sales.</p>
+                        <div class="spotlight-stats">
+                            <div class="stat-item">
+                                <span class="stat-number">4</span>
+                                <span class="stat-label">Years</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number">15</span>
+                                <span class="stat-label">Models</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+              </div>
+        </section>
+      </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+      <div class="footer-content">
+          <div class="footer-section">
+              <h4>Contact Info</h4>
+              <p>Email: support@dawntechnologies.com</p>
+              <p>Phone: +234 (901) 506-6886</p>
+          </div>
+          <div class="footer-section">
+              <h4>Quick Navigation</h4>
+              <ul>
+                  <li><a href="#dashboard">Dashboard</a></li>
+                  <li><a href="#departments">Departments</a></li>
+                  <li><a href="#support">Support</a></li>
+              </ul>
+          </div>
+          <div class="footer-section">
+              <p>&copy; 2024 Dawn Technologies - All Rights Reserved</p>
+          </div>
+      </div>
+  </footer>
+
+  <!-- Modal for Announcements -->
+  <div class="modal" id="announcementModal">
+      <div class="modal-content">
+          <span class="close-modal">&times;</span>
+          <h3 id="modalTitle">Announcement Title</h3>
+          <p id="modalContent">Announcement content will be displayed here...</p>
+      </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
